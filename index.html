@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <script>
+        function add(){
+            var a=document.getElementById("first").value;
+            var b=document.getElementById("second").value;
+            var out=Number(a)+Number(b);
+            document.getElementById("output").innerText=`Addition: ${out}`
+        }
+        function sub(){
+            var a=document.getElementById("first").value;
+            var b=document.getElementById("second").value;
+            var out=Number(a)-Number(b);
+            document.getElementById("output").innerText=`Subtraction: ${out}`
+        }
+        function mul(){
+            var a=document.getElementById("first").value;
+            var b=document.getElementById("second").value;
+            var out=Number(a)*Number(b);
+            document.getElementById("output").innerText=`Multiplication: ${out}`
+        }
+        function div(){
+            var a=document.getElementById("first").value;
+            var b=document.getElementById("second").value;
+            var out=Number(a)/Number(b);
+            document.getElementById("output").innerText=`Division: ${out}`
+        }
+        function mod(){
+            var a=document.getElementById("first").value;
+            var b=document.getElementById("second").value;
+            var out=Number(a)%Number(b);
+            document.getElementById("output").innerText=`Modulo: ${out}`
+        }
+    </script>
+   
+   
+</head>
+<style>
+    .container{
+        margin-top: 80px;
+    }
+   
+    #op{
+        margin-left: 115px;
+        margin-top: 40px;
+        
+    }
+    body{
+        background-image: url("assets/images/back4.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<body>
+    
+   
+    <div class="container">
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h2>Calculator</h2>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" name="first" id="first" placeholder="First Number" value="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" name="second" id="second" placeholder="second Number" value="">
+                        </div>
+                    </div>
+                    <p id="output"></p>
+                    <button class="btn btn-success" id="op" onclick="add()">Addition</button>
+                    <button class="btn btn-success" id="op" onclick="sub()">Subraction</button>
+                    <button class="btn btn-success" id="op" onclick="mul()">Multiplication</button>
+                    <button class="btn btn-success" id="op" onclick="div()">Division</button>
+                    <button class="btn btn-success" id="op" onclick="mod()">Modulo</button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
